@@ -111,3 +111,13 @@ for(let indice in pessoas){
     divListaObjForIn.innerHTML += `${indice} - ${pessoas[indice].nome}, ${pessoas[indice].idade}, R$ ${pessoas[indice].renda.toFixed(2).replace('.',',')} <br>`
 }
 
+//LISTANDO OBJETO LITERAL PELO FOR/OF
+const divListaForOf = document.querySelector('#div-listaobj-forof')
+
+let contForOf = 0
+
+for(let elem of pessoas){
+    contForOf++
+    
+    divListaForOf.innerHTML += `${contForOf}  -${elem.nome}, ${elem.idade}, R$ ${elem.renda.toFixed(2).replace('.', ',')} <br>`
+}
