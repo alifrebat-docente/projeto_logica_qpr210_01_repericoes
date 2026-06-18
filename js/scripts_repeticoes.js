@@ -45,6 +45,8 @@ btnFrase.addEventListener('click', (evt) => {
 //COLEÇÃO DE DADOS - ARRAY
 const presentes = ['Bicicleta', 'Celular', 'Camisa do Mengão', 'Doleira', 'Tênis Adidas']
 
+presentes.push('Smartphone')
+
 const divArray = document.querySelector('#div-array')
 
 console.log('---------------ANTES DO NOVO PRESENTE----------')
@@ -96,6 +98,29 @@ const pessoas = [
     {nome: 'Chicó', idade: 36, renda: 100},
     {nome: 'João Grilo', idade: 32, renda: 80},
 ]
+
+//MANIPULANDO ARRAY
+//ADICIONAR ELEMENTOS NO ARRAY
+pessoas.push({nome: 'Magnólia', idade: 32, renda: 3500})
+pessoas.unshift({nome: 'Joerdison', idade: 36, renda: 100000})
+
+//SPLICE ADICIONA EM UMA POSIÇÃO SEM EXCLUIR UM ELEMENTO
+pessoas.splice(3,0,{nome: 'Extraterrestre', idade: 250, renda: 0.50})
+
+//SPLICE ADICIONA EM UMA POSIÇÃO E NESSE EXEMPLO EXCLUI MAIS DOIS ELEMENTOS A PARTIR DA POSIÇÃO(INDÍCE) INFORMADO
+pessoas.splice(3,2,{nome: 'Extraterrestre', idade: 250, renda: 0.50})
+
+//SPLICE EXCLUI UMA POSIÇÃO E NESSE EXEMPLO EXCLUI APENAS O ELEMENTO DA POSIÇÃO(INDÍCE) INFORMADA
+//pessoas.splice(1,0)
+
+//SPLICE EXCLUI DOIS ELEMENTOS A PARTIR DA POSIÇÃO(INDÍCE) INFORMADA
+pessoas.splice(2,2)
+
+//EXCLUIR O ÚLTIMO ELEMENTO DO ARRAY
+pessoas.pop()
+
+//EXIBIR A QUANTIDADE DE ELEMENTOS EM UM ARRAY
+console.log('TOTAL DE ELEMENTOS NO ARRAY pessoas ====> ',pessoas.length)
 
 //LISTANDO OBJETO LITERAL PELO FOR
 const divListaObjFor = document.querySelector('#div-listaobj-for')
