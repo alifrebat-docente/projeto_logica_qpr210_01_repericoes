@@ -47,9 +47,23 @@ const presentes = ['Bicicleta', 'Celular', 'Camisa do Mengão', 'Doleira', 'Tên
 
 const divArray = document.querySelector('#div-array')
 
+console.log('---------------ANTES DO NOVO PRESENTE----------')
+for(i = 0;i < 5;i++ ){
+    console.log(presentes[i])
+    divArray.innerHTML += `${presentes[i]} <br>`
+}
+
+console.log(presentes[0])
+
+presentes[3] = 'Relógio'
+
+console.log('---------------DEPOIS DO NOVO PRESENTE----------')
+
+
 //divArray.innerHTML = presentes[6]
 
 for(i = 0;i < 5;i++ ){
+    console.log(presentes[i])
     divArray.innerHTML += `${presentes[i]} <br>`
 }
 
@@ -89,3 +103,11 @@ const divListaObjFor = document.querySelector('#div-listaobj-for')
 for(i = 0; i < pessoas.length;i++){
     divListaObjFor.innerHTML += `${pessoas[i].nome}, ${pessoas[i].idade} R$ ${pessoas[i].renda.toFixed(2).replace('.', ',')} <br>`
 }
+
+//LISTANDO OBJETO LITERAL PELO FOR/IN
+const divListaObjForIn = document.querySelector('#div-listaobj-forin')
+
+for(let indice in pessoas){
+    divListaObjForIn.innerHTML += `${indice} - ${pessoas[indice].nome}, ${pessoas[indice].idade}, R$ ${pessoas[indice].renda.toFixed(2).replace('.',',')} <br>`
+}
+
