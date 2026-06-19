@@ -71,7 +71,7 @@ const divNumSorteio = document.querySelector('#div-num-sorteio')
 
 let contVolta = 0, numSorteado = 0, contPar = 0, contImpar = 0
 
-const sorteio = setInterval(() => {
+/*const sorteio = setInterval(() => {
     contVolta++
 
     numSorteado = parseInt(Math.random() * 60)
@@ -99,6 +99,6 @@ const sorteio = setInterval(() => {
         contVolta = 0
         numSorteado = 0
     }
-}, 2000)
+}, 2000)*/
 
 
