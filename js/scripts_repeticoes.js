@@ -153,3 +153,4 @@ const divListaForeach = document.querySelector('#div-lista-foreach')
 pessoas.forEach((elem, i)=>{
     divListaForeach.innerHTML += `${i + 1} - ${elem.nome}, ${elem.idade} R$ ${elem.renda.toFixed(2).replace('.',',')} <br>`
 })
+
